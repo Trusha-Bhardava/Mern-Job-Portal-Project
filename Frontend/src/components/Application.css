@@ -1,0 +1,50 @@
+.applications-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.applications-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.applications-list {
+    display: grid;
+    gap: 20px;
+}
+
+.application-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.application-card h2 {
+    margin-bottom: 15px;
+}
+
+.application-card p {
+    margin: 8px 0;
+}
+
+.applications-message {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-applications-btn {
+    margin-left: 10px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.view-applications-btn:hover {
+    opacity: 0.85;
+}

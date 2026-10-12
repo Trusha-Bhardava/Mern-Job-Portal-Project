@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+Frontend/node_modules/
+Backend/node_modules/
+
+# Environment Variables / Secrets
+.env
+Backend/.env
+Fronted/.env
+
+# Production Builds
+Frontend/dist/
+Frontend/dist-ssr/
+
+# Logs and OS files
+*.log
+.DS_Store
+.vscode/
+
+
+# Environment files and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies
+node_modules/

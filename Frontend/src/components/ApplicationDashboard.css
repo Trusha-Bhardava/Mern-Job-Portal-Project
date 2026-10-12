@@ -1,0 +1,70 @@
+.application-dashboard {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.application-dashboard h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-message {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.dashboard-applications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.dashboard-application-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-application-card p {
+    margin: 10px 0;
+}
+
+.application-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.approve-btn,
+.reject-btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.approve-btn {
+    background: green;
+    color: white;
+}
+
+.reject-btn {
+    background: red;
+    color: white;
+}
+
+.approve-btn:disabled,
+.reject-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+
+    .dashboard-applications {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 40px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #646cff;
+}
+
+.home-page {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.home-page h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.home-page p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.home-buttons button,
+.auth-container button {
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    background: #646cff;
+    color: white;
+    border-radius: 5px;
+}
+
+.auth-container {
+    width: 400px;
+    margin: 70px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input,
+.auth-container select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

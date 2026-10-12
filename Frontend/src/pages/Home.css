@@ -1,0 +1,709 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f9fc;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+    min-height: 560px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8f9ff
+        );
+}
+
+
+.hero-content {
+    max-width: 1000px;
+    width: 100%;
+}
+
+
+.hero-small-title {
+    color: #6366f1;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero-content h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    margin: 0 0 25px;
+
+    color: #111827;
+}
+
+
+.hero-description {
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    color: #596273;
+}
+
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.job-search-box {
+    display: flex;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.job-search-box input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 16px;
+
+    font-size: 15px;
+
+    min-width: 0;
+}
+
+
+.job-search-box input + input {
+    border-left: 1px solid #e5e7eb;
+}
+
+
+.job-search-box button {
+    border: none;
+
+    background: #6366f1;
+
+    color: white;
+
+    padding: 0 28px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+.job-search-box button:hover {
+    background: #4f46e5;
+}
+
+
+.popular-text {
+    margin-top: 20px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats-section {
+    max-width: 1100px;
+
+    margin: -45px auto 0;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+
+.stat-box {
+    text-align: center;
+
+    padding: 30px 15px;
+
+    border-right: 1px solid #eeeeee;
+}
+
+
+.stat-box:last-child {
+    border-right: none;
+}
+
+
+.stat-box h2 {
+    margin: 0;
+
+    color: #6366f1;
+
+    font-size: 30px;
+}
+
+
+.stat-box p {
+    margin: 8px 0 0;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.categories-section,
+.why-section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 90px 20px;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading p {
+    color: #6366f1;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading h2 {
+    font-size: 34px;
+
+    margin: 0 0 12px;
+
+    color: #111827;
+}
+
+
+.section-heading span {
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.categories-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.category-card {
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #eeeeee;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.category-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+
+    border-color: #c7d2fe;
+}
+
+
+.category-icon {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+
+.category-card h3 {
+    margin: 0 0 10px;
+
+    color: #111827;
+}
+
+
+.category-card p {
+    color: #6b7280;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   WHY SECTION
+========================================= */
+
+.why-section {
+    max-width: none;
+
+    background: white;
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+}
+
+
+.features-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.feature-card {
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+
+.feature-icon {
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto auto 20px;
+
+    background: #eef2ff;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+}
+
+
+.feature-card h3 {
+    margin-bottom: 10px;
+
+    color: #111827;
+}
+
+
+.feature-card p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RECRUITER
+========================================= */
+
+.recruiter-section {
+    padding: 90px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #6366f1
+        );
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.recruiter-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.recruiter-content > p {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.recruiter-content h2 {
+    font-size: 38px;
+
+    margin: 15px 0;
+}
+
+
+.recruiter-content span {
+    display: block;
+
+    line-height: 1.6;
+
+    opacity: 0.9;
+
+    margin-bottom: 30px;
+}
+
+
+.recruiter-content button {
+    border: none;
+
+    background: white;
+
+    color: #4f46e5;
+
+    padding: 13px 28px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.cta-section {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: #f8f9fc;
+}
+
+
+.cta-section h2 {
+    font-size: 32px;
+
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+
+.cta-section p {
+    color: #6b7280;
+
+    margin-bottom: 25px;
+}
+
+
+.cta-section button {
+    background: #6366f1;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 28px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+.cta-section button:hover {
+    background: #4f46e5;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.home-footer {
+    background: #111827;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding: 60px max(30px, calc((100% - 1100px) / 2));
+}
+
+
+.home-footer h2 {
+    margin-top: 0;
+
+    font-size: 25px;
+}
+
+
+.home-footer p {
+    color: #9ca3af;
+
+    line-height: 1.6;
+}
+
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.footer-links h3 {
+    margin-top: 0;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-links button {
+    background: none;
+
+    border: none;
+
+    color: #9ca3af;
+
+    padding: 6px 0;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.footer-links button:hover {
+    color: white;
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.copyright {
+    background: #0b1120;
+
+    color: #6b7280;
+
+    text-align: center;
+
+    padding: 18px;
+}
+
+
+.copyright p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+
+    .stats-section {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+
+    .categories-grid,
+    .features-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .hero-section {
+        padding: 60px 15px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .job-search-box {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    .job-search-box input + input {
+        border-left: none;
+
+        border-top: 1px solid #eeeeee;
+    }
+
+
+    .job-search-box button {
+        padding: 14px;
+    }
+
+
+    .stats-section {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .stat-box {
+        border-bottom: 1px solid #eeeeee;
+    }
+
+
+    .categories-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+
+    .recruiter-content h2 {
+        font-size: 30px;
+    }
+
+
+    .home-footer {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+}

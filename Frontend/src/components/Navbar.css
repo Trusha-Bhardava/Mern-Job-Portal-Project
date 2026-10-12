@@ -1,0 +1,162 @@
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar {
+    width: 100%;
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 70px;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* ==============================
+   LOGO
+============================== */
+
+.navbar-logo a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 38px;
+
+    font-weight: 700;
+}
+
+
+/* ==============================
+   NAVIGATION LINKS
+============================== */
+
+.navbar-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+.navbar-links a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 22px;
+
+    transition: 0.2s;
+}
+
+
+.navbar-links a:hover {
+    color: #4f46e5;
+}
+
+
+/* ==============================
+   LOGOUT BUTTON
+============================== */
+
+.logout-btn {
+    border: none;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 20px;
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.logout-btn:hover {
+    background: #3730a3;
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .navbar-logo a {
+        font-size: 30px;
+    }
+
+    .navbar-links {
+        gap: 20px;
+    }
+
+    .navbar-links a {
+        font-size: 19px;
+    }
+
+    .logout-btn {
+        font-size: 17px;
+
+        padding: 11px 20px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .navbar-logo a {
+        font-size: 30px;
+    }
+
+    .navbar-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .navbar-links a {
+        font-size: 18px;
+    }
+
+    .logout-btn {
+        font-size: 16px;
+
+        padding: 10px 18px;
+    }
+}

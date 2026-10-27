@@ -16,19 +16,13 @@ const Company = () => {
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
 
-
-    // =====================================
     // GET MY COMPANY
-    // =====================================
-
+   
     const getMyCompany = async () => {
 
         try {
-
             setLoading(true);
-
             console.log("Getting company...");
-
             const response = await axios.get(
                 "http://localhost:8000/api/v1/company/",
                 {
@@ -36,11 +30,7 @@ const Company = () => {
                 }
             );
 
-            console.log(
-                "Company API Response:",
-                response.data
-            );
-
+            console.log("Company API Response:",response.data);
 
             if (
                 response.data.success &&
@@ -68,54 +58,33 @@ const Company = () => {
                 });
 
             } else {
-
                 // Recruiter has not created company yet
-
                 setCompany(null);
-
             }
 
         } catch (error) {
 
-            console.log(
-                "GET COMPANY ERROR:",
-                error
-            );
+            console.log("GET COMPANY ERROR:",error);
 
-            console.log(
-                "BACKEND RESPONSE:",
-                error.response?.data
-            );
+            console.log("BACKEND RESPONSE:",error.response?.data);
 
             setCompany(null);
 
         } finally {
-
             // VERY IMPORTANT
             setLoading(false);
-
         }
-
     };
 
-
-    // =====================================
     // LOAD COMPANY WHEN PAGE OPENS
-    // =====================================
-
+  
     useEffect(() => {
 
         getMyCompany();
 
     }, []);
 
-
-    // =====================================
-    // HANDLE INPUT
-    // =====================================
-
     const handleChange = (e) => {
-
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -124,14 +93,8 @@ const Company = () => {
     };
 
 
-    // =====================================
-    // CREATE COMPANY
-    // =====================================
-
     const handleCreateCompany = async (e) => {
-
         e.preventDefault();
-
         try {
 
             setSaving(true);
@@ -144,10 +107,7 @@ const Company = () => {
                 }
             );
 
-            console.log(
-                "CREATE COMPANY RESPONSE:",
-                response.data
-            );
+            console.log("CREATE COMPANY RESPONSE:",response.data);
 
 
             if (response.data.success) {
@@ -158,7 +118,6 @@ const Company = () => {
                 );
 
                 // Immediately show created company
-
                 setCompany(
                     response.data.company
                 );
@@ -176,20 +135,12 @@ const Company = () => {
                     location:
                         response.data.company.location || ""
                 });
-
             }
 
         } catch (error) {
+            console.log("CREATE COMPANY ERROR:",error);
 
-            console.log(
-                "CREATE COMPANY ERROR:",
-                error
-            );
-
-            console.log(
-                "BACKEND RESPONSE:",
-                error.response?.data
-            );
+            console.log("BACKEND RESPONSE:",error.response?.data);
 
             alert(
                 error.response?.data?.message ||
@@ -197,17 +148,12 @@ const Company = () => {
             );
 
         } finally {
-
             setSaving(false);
-
         }
 
     };
 
-
-    // =====================================
     // UPDATE COMPANY
-    // =====================================
 
     const handleUpdateCompany = async (e) => {
 
@@ -218,7 +164,6 @@ const Company = () => {
         }
 
         try {
-
             setSaving(true);
 
             const response = await axios.put(
@@ -229,11 +174,7 @@ const Company = () => {
                 }
             );
 
-            console.log(
-                "UPDATE COMPANY RESPONSE:",
-                response.data
-            );
-
+            console.log("UPDATE COMPANY RESPONSE:",response.data);
 
             if (response.data.success) {
 
@@ -249,16 +190,9 @@ const Company = () => {
             }
 
         } catch (error) {
+            console.log("UPDATE COMPANY ERROR:",error);
 
-            console.log(
-                "UPDATE COMPANY ERROR:",
-                error
-            );
-
-            console.log(
-                "BACKEND RESPONSE:",
-                error.response?.data
-            );
+            console.log("BACKEND RESPONSE:",error.response?.data);
 
             alert(
                 error.response?.data?.message ||
@@ -266,17 +200,11 @@ const Company = () => {
             );
 
         } finally {
-
             setSaving(false);
-
         }
-
     };
 
-
-    // =====================================
     // DELETE COMPANY
-    // =====================================
 
     const handleDeleteCompany = async () => {
 
@@ -301,10 +229,7 @@ const Company = () => {
                 }
             );
 
-            console.log(
-                "DELETE COMPANY RESPONSE:",
-                response.data
-            );
+            console.log("DELETE COMPANY RESPONSE:",response.data);
 
 
             if (response.data.success) {
@@ -322,65 +247,45 @@ const Company = () => {
                     website: "",
                     location: ""
                 });
-
             }
 
         } catch (error) {
 
-            console.log(
-                "DELETE COMPANY ERROR:",
-                error
-            );
-
-            console.log(
-                "BACKEND RESPONSE:",
-                error.response?.data
-            );
-
+            console.log("DELETE COMPANY ERROR:", error);
+            console.log("BACKEND RESPONSE:",error.response?.data);
             alert(
                 error.response?.data?.message ||
                 "Company deletion failed"
             );
-
         }
-
     };
 
 
-    // =====================================
+    
     // LOADING
-    // =====================================
-
+   
     if (loading) {
 
         return (
             <div className="company-container">
-
                 <h2>
                     Loading company...
                 </h2>
-
             </div>
         );
-
     }
 
-
-    // =====================================
     // PAGE
-    // =====================================
 
     return (
 
         <div className="company-container">
-
             <h2>
                 {company
                     ? "My Company"
                     : "Create Company"
                 }
             </h2>
-
 
             <form
                 className="company-form"
@@ -390,7 +295,6 @@ const Company = () => {
                         : handleCreateCompany
                 }
             >
-
                 {/* COMPANY NAME */}
 
                 <input
@@ -468,7 +372,6 @@ const Company = () => {
 
             </form>
 
-
             {/* COMPANY INFORMATION */}
 
             {company && (
@@ -498,15 +401,10 @@ const Company = () => {
                         <strong>Location:</strong>{" "}
                         {company.location || "N/A"}
                     </p>
-
                 </div>
-
             )}
-
         </div>
-
     );
-
 };
 
 export default Company;

@@ -6,20 +6,14 @@ import "./Application.css";
 const Applications = () => {
 
     const { id } = useParams();
-
-    const [applications, setApplications] =
-        useState([]);
-
+    const [applications, setApplications] =useState([]);
     const [loading, setLoading] =
         useState(true);
-
 
     useEffect(() => {
 
         const fetchApplications = async () => {
-
             try {
-
                 const response =
                     await axios.get(
                       `http://localhost:8000/api/v1/application/${id}/applicants`,
@@ -27,55 +21,35 @@ const Applications = () => {
                             withCredentials: true
                         }
                     );
-
-                console.log(
-                    "Applications:",
-                    response.data
-                );
-
-                setApplications(
-                    response.data.applications || []
-                );
-
-            } catch (error) {
-
-                console.log(
-                    "Applications Error:",
-                    error
-                );
-
-            } finally {
-
+                console.log("Applications:",response.data);
+                setApplications(response.data.applications || []
+);
+            } catch (error) 
+            {
+                console.log("Applications Error:",error);
+            } 
+            finally
+            {
                 setLoading(false);
-
             }
-
         };
-
         fetchApplications();
-
     }, [id]);
 
-
     if (loading) {
-
         return (
             <h2 className="applications-message">
                 Loading applications...
             </h2>
         );
-
     }
 
 
     return (
-
         <div className="applications-container">
-
             <h1>
                 Job Applications
             </h1>
-
 
             {applications.length === 0 ? (
 
@@ -92,8 +66,7 @@ const Applications = () => {
 
                             <div
                                 className="application-card"
-                                key={application._id}
-                            >
+                                key={application._id}>
 
                                 <h2>
                                     {application.applicant?.fullName}
@@ -119,7 +92,7 @@ const Applications = () => {
                                     </strong>{" "}
                                     {application.status}
                                 </p>
-
+                                
                                 <p>
                                     <strong>
                                         Applied For:
@@ -128,18 +101,12 @@ const Applications = () => {
                                 </p>
 
                             </div>
-
                         )
                     )}
-
                 </div>
-
             )}
-
         </div>
-
     );
-
 };
 
 export default Applications;

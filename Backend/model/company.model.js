@@ -22,9 +22,10 @@ const companySchema = new mongoose.Schema(
             default: ""
         },
 
+        // Stores the unique MongoDB ID of the user (recruiter) who created this company
         userId: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "user",
+            ref: "user",   // links this field directly to your User collection
             required: true
         }
     },

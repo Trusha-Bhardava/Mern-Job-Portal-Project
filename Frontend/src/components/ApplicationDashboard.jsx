@@ -10,9 +10,7 @@ const ApplicationDashboard = () => {
     useEffect(() => {
 
         const fetchApplications = async () => {
-
             try {
-
                 // Get jobs created by recruiter
                 const jobResponse = await axios.get(
                     "http://localhost:8000/api/v1/job/getadminjobs",
@@ -22,9 +20,7 @@ const ApplicationDashboard = () => {
                 );
 
                 console.log("Recruiter Jobs:", jobResponse.data);
-
                 const jobs = jobResponse.data.jobs || [];
-
                 let allApplications = [];
 
                 // Get applications for each job
@@ -37,8 +33,7 @@ const ApplicationDashboard = () => {
                         }
                     );
 
-                    const jobApplications =
-                        response.data.applications || [];
+                    const jobApplications = response.data.applications || [];
 
                     const applicationsWithJob =
                         jobApplications.map((application) => ({
@@ -51,32 +46,21 @@ const ApplicationDashboard = () => {
                     );
                 }
 
-                console.log(
-                    "All Applications:",
-                    allApplications
-                );
-
+                console.log("All Applications:", allApplications);
                 setApplications(allApplications);
-
-            } catch (error) {
-
-                console.log(
-                    "Dashboard Error:",
-                    error
-                );
-
-            } finally {
-
+            }
+             catch (error)
+              {
+                console.log("Dashboard Error:", error);
+            }
+            finally 
+            {
                 setLoading(false);
-
             }
 
         };
-
         fetchApplications();
-
     }, []);
-
 
     // APPROVE / REJECT
     const handleStatusChange = async (
@@ -96,10 +80,7 @@ const ApplicationDashboard = () => {
                 }
             );
 
-            console.log(
-                "Status Response:",
-                response.data
-            );
+            console.log("Status Response:",response.data);
 
             if (response.data.success) {
 
@@ -124,11 +105,7 @@ const ApplicationDashboard = () => {
             }
 
         } catch (error) {
-
-            console.log(
-                "Update Status Error:",
-                error
-            );
+            console.log( "Update Status Error:",error);
 
             alert(
                 error.response?.data?.message ||
@@ -147,14 +124,11 @@ const ApplicationDashboard = () => {
                 Loading applications...
             </h2>
         );
-
     }
-
 
     return (
 
         <div className="application-dashboard">
-
             <h1>
                 Application Dashboard
             </h1>
@@ -234,22 +208,14 @@ const ApplicationDashboard = () => {
                                     >
                                         Reject
                                     </button>
-
                                 </div>
-
                             </div>
-
                         )
                     )}
-
                 </div>
-
             )}
-
         </div>
-
     );
-
 };
 
 export default ApplicationDashboard;

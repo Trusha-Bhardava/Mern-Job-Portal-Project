@@ -16,6 +16,7 @@ const applicationSchema = new mongoose.Schema(
 
         status: {
             type: String,
+            // enum means restricted list of choices
             enum: ["pending", "accepted", "rejected"],
             default: "pending"
         }
@@ -25,9 +26,6 @@ const applicationSchema = new mongoose.Schema(
     }
 );
 
-export const Application = mongoose.model(
-    "Application",
-    applicationSchema
-);
+export const Application = mongoose.model( "Application",applicationSchema);
 
 export default Application;

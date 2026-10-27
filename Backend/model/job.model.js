@@ -13,8 +13,8 @@ const jobSchema = new mongoose.Schema(
         },
 
         requirements: {
-            type: [String],
-            default: []
+            type: [String],   // This field must be an array of text strings
+            default: []       // If nothing is provided, it starts as an empty list []
         },
 
         salary: {
@@ -43,8 +43,8 @@ const jobSchema = new mongoose.Schema(
         },
 
         company: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Company",
+            type: mongoose.Schema.Types.ObjectId,  // Saves a unique database ID from another collection
+            ref: "Company",                        // Connects this field to the "Company" model
             required: true
         },
 

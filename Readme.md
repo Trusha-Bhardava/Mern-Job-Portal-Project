@@ -59,8 +59,11 @@ A full-stack Job Portal web application built using the MERN stack. The platform
 
 ## Project Structure
 
+## 📁 Project Structure
 
+```text
 Job-Portal-project/
+│
 ├── Client/
 │   ├── src/
 │   │   ├── components/
@@ -81,6 +84,11 @@ Job-Portal-project/
 │   └── package.json
 │
 └── README.md
+```
+
+*The structure above is illustrative. Folder and file names may differ slightly in the actual project.*
+
+
 
 *Note: The folder names above illustrate the intended organization. Adjust them to match the actual folders in your repository.*
 

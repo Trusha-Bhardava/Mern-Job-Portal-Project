@@ -59,11 +59,8 @@ A full-stack Job Portal web application built using the MERN stack. The platform
 
 ## Project Structure
 
-## 📁 Project Structure
-
 ```text
 Job-Portal-project/
-│
 ├── Client/
 │   ├── src/
 │   │   ├── components/
@@ -86,10 +83,6 @@ Job-Portal-project/
 └── README.md
 ```
 
-*The structure above is illustrative. Folder and file names may differ slightly in the actual project.*
-
-
-
 *Note: The folder names above illustrate the intended organization. Adjust them to match the actual folders in your repository.*
 
 ## Getting Started
@@ -105,32 +98,35 @@ Install the following before running the project:
 
 ### 1. Clone the Repository
 
+```bash
 git clone https://github.com/Trusha-Bhardava/Job-Portal-project.git
 cd Job-Portal-project
-
+```
 
 ### 2. Set Up the Backend
 
 Open a terminal in VS Code and navigate to the backend folder:
 
-
+```bash
 cd Backend
 npm install
+```
 
 Create a `.env` file inside the backend folder:
 
-
+```env
 PORT=8000
 MONGO_URI=your_mongodb_connection_string
 SECRET_KEY=your_long_random_secret_key
-
+```
 
 Replace the placeholder values with your own configuration. Never commit your actual database credentials or secret key to GitHub.
 
 Start the backend:
 
-
+```bash
 npm run dev
+```
 
 The backend should run at:
 
@@ -140,11 +136,11 @@ The backend should run at:
 
 Open a second terminal in VS Code:
 
-
+```bash
 cd Client
 npm install
 npm run dev
-
+```
 
 Vite will display the local frontend URL in the terminal, commonly:
 
@@ -201,4 +197,18 @@ This project provides practical experience with:
 - Full-stack web development using the MERN stack
 - React components, hooks, and routing
 - REST API development using Express.js
-- MongoDB schemas and relationships using
+- MongoDB schemas and relationships using Mongoose
+- Authentication and authorization
+- Frontend-backend integration
+- CRUD operations and error handling
+- Git and GitHub version control
+
+## Author
+
+**Trusha Bhardava**
+
+GitHub: [Trusha-Bhardava](https://github.com/Trusha-Bhardava)
+
+---
+
+This project was developed for learning and practicing full-stack web development.
